@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Tracking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Health Tracking</h1>
+        <a href="{{ url_for('index') }}">Back to Homepage</a>
+    </header>
+    <section>
+        <h2>Health Metrics</h2>
+        <p>Heart Rate: {{ health_data.heart_rate }} bpm</p>
+        <p>Blood Pressure: {{ health_data.blood_pressure }}</p>
+        <p>Step Count: {{ health_data.steps }}</p>
+    </section>
+</body>
+</html>

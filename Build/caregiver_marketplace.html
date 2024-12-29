@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caregiver Marketplace</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Caregiver Marketplace</h1>
+        <a href="{{ url_for('index') }}">Back to Homepage</a>
+    </header>
+    <section>
+        <h2>Available Caregivers</h2>
+        <ul>
+            {% for caregiver in caregivers %}
+                <li>
+                    <h3>{{ caregiver.name }}</h3>
+                    <p>Experience: {{ caregiver.experience }} years</p>
+                    <p>Specialty: {{ caregiver.specialty }}</p>
+                    <button>Contact</button>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

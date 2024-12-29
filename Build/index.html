@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CareMate - Homepage</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to CareMate</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('task_reminder') }}">Task Reminders</a></li>
+            <li><a href="{{ url_for('health_tracking') }}">Health Tracking</a></li>
+            <li><a href="{{ url_for('caregiver_marketplace') }}">Caregiver Marketplace</a></li>
+            <li><a href="{{ url_for('video_call') }}">Video Calls</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
